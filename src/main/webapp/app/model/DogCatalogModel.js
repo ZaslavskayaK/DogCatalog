@@ -11,7 +11,7 @@ Ext.define('DogCatalog.model.DogCatalogModel', {
         },
         reader: {
             type: 'json',
-            rootProperty: 'data',
+            root: 'data',
             successProperty: 'success'
         },
         writer: {

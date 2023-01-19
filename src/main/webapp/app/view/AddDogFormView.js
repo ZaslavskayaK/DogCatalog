@@ -12,7 +12,7 @@ Ext.define('DogCatalog.view.AddDogFormView', {
                 {
                     xtype: 'textfield',
                     name: 'name',
-                    fieldLabel: 'Название породы    ',
+                    fieldLabel: 'Название породы',
                     allowBlank: false,
                     blankText: 'Это поле должно быть заполнено'
                 },

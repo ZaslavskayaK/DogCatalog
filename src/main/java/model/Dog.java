@@ -8,7 +8,7 @@ import java.io.Serializable;
 public class Dog implements Serializable {
 
     @Id
-    @Column(name = "id")
+    @Column(name = "ID")
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 

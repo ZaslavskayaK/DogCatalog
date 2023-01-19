@@ -22,8 +22,8 @@ Ext.define('DogCatalog.view.DogGridView', {
             }
         },
         {
+            text: 'Цена',// поменяла местами строки
             flex: 2,
-            text: 'Цена',
             sortable: true,
             dataIndex: 'price',
             editor: {

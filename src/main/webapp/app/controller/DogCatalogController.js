@@ -3,7 +3,8 @@ Ext.define('DogCatalog.controller.DogCatalogController', {
 
     refs: [
         {selector: 'dogGridView',
-            ref: 'dogGridView button[action="add"]',
+            ref: 'dogGridView'},
+        {selector: 'dogGridView button[action="add"]',
             ref: 'dogGridAdd'},
         {selector: 'dogGridView button[action="delete"]',
             ref: 'dogGridDelete'},
@@ -13,7 +14,7 @@ Ext.define('DogCatalog.controller.DogCatalogController', {
             ref: 'addDogFormView'},
         {selector: 'dogCatalogView',
             ref: 'dogCatalogView'},
-        {selector: 'addDogFormView textfield[name=name] ',
+        {selector: 'addDogFormView textfield[name=name]',
             ref: 'addDogFormName'},
         {selector: 'addDogFormView textfield[name=price]',
             ref: 'addDogFormPrice'},
@@ -50,6 +51,7 @@ Ext.define('DogCatalog.controller.DogCatalogController', {
     onSaveDog: function (button) {
         var me = this;
         var dogModel = Ext.create('DogCatalog.model.DogCatalogModel');
+        dogModel.setId(null);
         dogModel.set(this.getAddDogFormView().down('form').getValues());
         dogModel.save({
             success: function (operation, response) {

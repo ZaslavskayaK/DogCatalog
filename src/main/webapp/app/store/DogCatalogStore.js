@@ -16,7 +16,7 @@ Ext.define('DogCatalog.store.DogCatalogStore', {
         },
         reader: {
             type: 'json',
-            rootProperty: 'data',
+            root: 'data',
             successProperty: 'success'
         },
         writer: {
